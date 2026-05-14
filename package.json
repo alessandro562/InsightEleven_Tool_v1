@@ -1,0 +1,20 @@
+{
+  "name": "insight-eleven-virtual-scout",
+  "version": "1.0.0",
+  "description": "Insight Eleven Virtual Scout — Football Scouting Engine",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["football", "scouting", "ai", "insight-eleven"],
+  "author": "Insight Eleven",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "express": "^4.21.0",
+    "dotenv": "^16.4.5",
+    "marked": "^15.0.0"
+  }
+}
