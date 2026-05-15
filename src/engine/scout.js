@@ -10,7 +10,7 @@ const MODEL = 'claude-sonnet-4-6';
 const MAX_TOKENS = 8192;
 
 function getClient() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.SCOUT_API_KEY || process.env.ANTHROPIC_API_KEY;
   console.log('>>> getClient() - API KEY presente:', !!apiKey);
   return new Anthropic({ apiKey });
 }
