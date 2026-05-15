@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 console.log('>>> API KEY presente:', !!process.env.ANTHROPIC_API_KEY);
 console.log('>>> PORT:', PORT);
+console.log('>>> ENV VARS:', Object.keys(process.env).filter(k => !k.includes('npm') && !k.includes('PATH')).join(', '));
 
 // Middleware
 app.use(express.json());
