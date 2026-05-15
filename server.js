@@ -12,6 +12,9 @@ const { generateScoutCard, generateRanking, generatePremiumDossier } = require('
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+console.log('>>> API KEY presente:', !!process.env.ANTHROPIC_API_KEY);
+console.log('>>> PORT:', PORT);
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));

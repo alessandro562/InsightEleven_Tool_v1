@@ -131,18 +131,18 @@
           const raw = line.slice(6).trim();
           if (!raw) continue;
 
+          let data;
           try {
-            const data = JSON.parse(raw);
-            if (data.type === 'text') {
-              state.currentMarkdown += data.content;
-              renderMarkdown();
-            } else if (data.type === 'error') {
-              throw new Error(data.message);
-            }
+            data = JSON.parse(raw);
           } catch (e) {
-            if (e.message !== 'Unexpected end of JSON input') {
-              console.warn('Parse warning:', e.message);
-            }
+            continue;
+          }
+
+          if (data.type === 'text') {
+            state.currentMarkdown += data.content;
+            renderMarkdown();
+          } else if (data.type === 'error') {
+            throw new Error(data.message);
           }
         }
       }
