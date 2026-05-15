@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// Insight Eleven Virtual Scout — Server Express
+// Insight Eleven Virtual Scout — Server Express v1.1
 // Backend API per il motore di scouting
 // ─────────────────────────────────────────────────────────────────────────────
 
